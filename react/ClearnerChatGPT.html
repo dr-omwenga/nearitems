@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple React Chat</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+      function App() {
+        const [messages, setMessages] = React.useState([]);
+        const [input, setInput] = React.useState('');
+
+        function sendMessage() {
+          if (!input) return;
+
+          const userMessage = {
+            text: input,
+            sender: 'user',
+            id: crypto.randomUUID()
+          };
+
+          const robotMessage = {
+            text: Chatbot.getResponse(input),
+            sender: 'robot',
+            id: crypto.randomUUID()
+          };
+
+          setMessages([...messages, userMessage, robotMessage]);
+          setInput('');
+        }
+
+        return (
+          <>
+            <input
+              placeholder="Type a message"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            />
+            <button onClick={sendMessage}>Send</button>
+
+            <div>
+              {messages.map((msg) => (
+                <div key={msg.id}>
+                  {msg.sender === 'robot' && '🤖 '}
+                  {msg.text}
+                  {msg.sender === 'user' && ' 👤'}
+                </div>
+              ))}
+            </div>
+          </>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  margin-top: 60px;
+  background: linear-gradient(
+    135deg,
+    rgb(28, 38, 50) 0%,
+    rgb(36, 46, 59) 25%,
+    rgb(48, 60, 74) 50%
+  ); 
+
+}
+
+.login-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  text-align: center;
+  color: rgb(8, 79, 45);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(8, 79, 45);
+  margin-bottom: 8px;
+}
+
+.form-input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: rgb(8, 79, 45);
+  box-shadow: 0 0 0 2px rgba(8, 79, 45, 0.1);
+}
+
+.login-button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background-color: rgb(8, 79, 45);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background-color: rgb(6, 60, 35);
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.login-text {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.signup-link {
+  color: rgb(8, 79, 45);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.signup-link:hover {
+  color: rgb(6, 60, 35);
+  text-decoration: underline;
+}

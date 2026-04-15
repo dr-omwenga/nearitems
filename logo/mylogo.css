@@ -1,0 +1,27 @@
+body {
+  background-color: aqua;
+}
+
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 48px;              /* typical title bar height */
+  padding: 0 12px;
+  background: #ffffff;
+}
+
+.logo { 
+  max-height: 50px;              /* icon size */
+  width: auto;               /* keeps proportions */
+  object-fit: contain;       /* prevents distortion */
+ /* margin-right: 8px; */
+}
+
+
+@media (max-width: 675px) {
+  .logo {
+    height: 22px;
+  }
+}

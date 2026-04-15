@@ -1,0 +1,63 @@
+.second-header {
+  width: 100%;
+  overflow: hidden;
+  background: #050b18; /* deep premium ocean base 🌌 */
+  padding: 12px 0;
+}
+
+.ticker {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.track {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+  animation: scroll 18s linear infinite;
+  
+}
+
+/* ✨ Premium gradient text */
+.track span {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #00f5ff,
+    #7c3aed,
+    #ff4ecd,
+    #00f5ff
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientMove 6s ease infinite;
+}
+
+/* 🔁 Seamless scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /*start fully in the right */
+  }
+  100% {
+    transform: translateX(-50%); /*move left seamlessly*/
+  }
+}
+
+/* 🌈 Moving gradient effect */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics </title>
+  </head>
+
+  <body>
+
+    <div class="js-container"></div>
+
+    <!--
+      These two scripts load the React libraries: react.js and react-dom.js.
+      react.js library contains shared React features while 
+      react-dom.js contains features specific to websites.
+    -->
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <!-- The babel.js library is a compiler.
+     It converts JSX to JS; it compiles other languages to JS.
+     It also converts modern JS into older versions
+     When using Babel, we use an enhanced version of JS called JSX,
+     JSX means Javascript XML ==> JavaScript + XML.
+     Simply means we can write HTML code inside JS code.
+    -->
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    
+    <script type="text/babel">
+      
+      //Example of JSX: creating a button using JSX syntax
+      const button = <button> Hello!</button>;
+
+      //Targeting the container div in the HTML body above
+      const container = document.querySelector('.js-container');
+       /* 
+       ReactDOM.createRoot sets up react 
+       The render() method tells React what to display 
+       inside the container element. */    
+      ReactDOM.createRoot(container).render(button);
+   
+    </script>
+
+  </body>
+</html>

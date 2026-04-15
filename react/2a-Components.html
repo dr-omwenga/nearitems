@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Components, props, and chatbot </title>
+  </head>
+
+  <body>
+
+   
+    <div class="js-container"></div>
+        
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+   
+   /* Creating the ChatInput component:
+      A function can only return one value. So we group 
+        <input />
+        <button>Send</button> 
+      inside a <div></div> element or fragments <> </>. Using <> </> helps us avoid inserting 
+      extra divs when calling the function. 
+    */
+  
+    function ChatInput(){
+      return(
+        <>
+          <input placeholder="Send a message to Chatbot"/>
+          <button>Send</button>
+        </>
+      );
+
+    }
+
+    //Saving the componet in a variable:
+    // Use <ChatInput></ChatInput> or <ChatInput /> instead of {ChatInput()} to run
+    // the ChatInput(). 
+      const app = (
+        <>
+         <ChatInput />
+        </>
+      );
+
+    // Rendering the component:
+      const container = document.querySelector('.js-container'); 
+      ReactDOM.createRoot(container).render(app);
+
+    </script>
+
+  </body>
+</html>

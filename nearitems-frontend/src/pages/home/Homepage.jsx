@@ -18,7 +18,7 @@ export function HomePage({ cart, loadCart }) {
 
   return (
     <>
-      <title>awcean</title>
+      <title>nearitems</title>
 
       <Header cart={cart}/>
 

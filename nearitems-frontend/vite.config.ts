@@ -19,6 +19,6 @@ export default defineConfig({
       }
     },
     build: {
-      outDir: '../myecommerce-backend/dist'
+      outDir: '../nearitems-backend/dist'
     },
 })
